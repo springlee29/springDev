@@ -12,9 +12,11 @@ public class Cats2 {
 	
 	public void getMycatsInfo() {
 		System.out.println("=========================");
-		System.out.println("혀니 이름 "+ myCats.getName());
-		System.out.println("혀니 나이"+ myCats.getAge());
-		System.out.println("혀니 취미"+ myCats.getHobbys());
+		System.out.println("냥이 이름 "+ myCats.getName());
+		System.out.println("냥이 나이"+ myCats.getAge());
+		System.out.println("냥이 취미"+ myCats.getHobbys());
+		System.out.println("냥이 몸무게"+ myCats.getWeight());
+		System.out.println("냥이 색"+ myCats.getColor());
 		System.out.println("=========================");
 	}
 	

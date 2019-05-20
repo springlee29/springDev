@@ -34,6 +34,8 @@
 			<value>꾹꾹이</value>
 		</list>
 	</constructor-arg>
+	<property name="weight" value="3.2"/>	
+	<property name="color" value="broun"></property>	
 </bean>
 
 <bean id="cat2" class="com.di.example.test2.MyCats2"> 
