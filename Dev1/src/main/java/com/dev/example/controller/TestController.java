@@ -23,6 +23,13 @@ public class TestController {
 	public ResponseEntity<String> first(HttpServletRequest request){
 		testService.business1();
 		
-		return ResponseEntity.ok("OK");
+		return ResponseEntity.ok().body("OK");
+	}
+	
+	@GetMapping(value="/second")
+	public ResponseEntity<String> second(HttpServletRequest request){
+		testService.business2();
+		
+		return ResponseEntity.ok().body("OK");
 	}
 }

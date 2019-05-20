@@ -29,5 +29,24 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
+       
+    <filter> 
+    	<filter-name>encodingFilter</filter-name> 
+    	<!-- HTTP 상에서 주고 받는 데이터의 헤더값을 UTF-8로 인코딩 -->
+    	<!--  post 요청을 보내는 모든 controller 마다  request.setCharacterEncoding("utf-8"); 내용을 추가하지 않아도 된다. -->
+    	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+	    <init-param> 
+	       <param-name>encoding</param-name> 
+	       <param-value>UTF-8</param-value> 
+	    </init-param> 
+	    <init-param> 
+	       <param-name>forceEncoding</param-name> 
+	       <param-value>true</param-value> 
+	    </init-param> 
+ 	</filter> 
+ 	<!-- 모든 url에 대한 인코딩 될수 있게 설정 -->
+	 <filter-mapping> 
+	    <filter-name>encodingFilter</filter-name> 
+	    <url-pattern>/*</url-pattern> 
+	 </filter-mapping> 
 </web-app>
