@@ -1,4 +1,4 @@
-package com.di.example;
+package com.di.example.test1;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;

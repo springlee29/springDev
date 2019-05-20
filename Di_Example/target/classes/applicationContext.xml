@@ -4,17 +4,52 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Cats크래스를 cats라는 id로 지정해 빈 객체 생성 -->	
-	<bean id="cats" class="com.di.example.Cats"/>
+	<bean id="cats" class="com.di.example.test1.Cats"/>
 	
-	<bean id="myCats" class="com.di.example.MyCats">
+	<bean id="myCats" class="com.di.example.test1.MyCats">
 		<property name="cats">
 			<ref bean="cats"></ref>
 		</property>
 		
+		<!--  setter 가있을때만 가능 -->
 		<property name="firstCatName" value="혀니"></property>
 		<property name="secondCatName" value="봄"></property>
 		<property name="firstCatAge" value="1"></property>
 		<property name="secondCatAge" value="2"></property>
 	</bean>
 
+
+<bean id="cat1" class="com.di.example.test2.MyCats2">
+	<!-- 생성자일때 -->
+	<constructor-arg>
+		<value>나비</value>
+	</constructor-arg>
+		
+	<constructor-arg>
+		<value>2</value>
+	</constructor-arg>
+	<constructor-arg>
+		<list>
+			<value>잠자기</value>
+			<value>꾹꾹이</value>
+		</list>
+	</constructor-arg>
+</bean>
+
+<bean id="cat2" class="com.di.example.test2.MyCats2"> 
+<constructor-arg value="랑이"/>
+<constructor-arg value="1"/>
+<constructor-arg>
+	<list>
+		<value>우다다</value>
+		<value>박치기</value>
+	</list>
+</constructor-arg>
+</bean>
+
+<bean id="catsInfo" class="com.di.example.test2.Cats2">
+	<constructor-arg>
+		<ref bean="cat1"/>
+	</constructor-arg>
+</bean>
 </beans>

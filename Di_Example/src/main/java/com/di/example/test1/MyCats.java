@@ -1,4 +1,4 @@
-package com.di.example;
+package com.di.example.test1;
 
 public class MyCats {
 
