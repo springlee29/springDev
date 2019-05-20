@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Cats크래스를 cats라는 id로 지정해 빈 객체 생성 -->	
+	<bean id="cats" class="com.di.example.Cats"/>
+	
+	<bean id="myCats" class="com.di.example.MyCats">
+		<property name="cats">
+			<ref bean="cats"></ref>
+		</property>
+		
+		<property name="firstCatName" value="혀니"></property>
+		<property name="secondCatName" value="봄"></property>
+		<property name="firstCatAge" value="1"></property>
+		<property name="secondCatAge" value="2"></property>
+	</bean>
+
+</beans>
